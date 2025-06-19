@@ -5,7 +5,6 @@ from detail.urls import *
 urlpatterns = [
     path('super/',include('detail.urls')),
 
-
 ]
 
 

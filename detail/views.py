@@ -12,10 +12,9 @@ from django.http import HttpResponse
 
 
 
-
 def home(request):
     data={"detail":details.objects.all()}
-    return HttpResponse(request,'home.html',data)
+    return render(request,'home.html',data)
 
     
 def abouts(request):
