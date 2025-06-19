@@ -1,0 +1,394 @@
+{%extends 'basic.html'%}
+{%block nav%} 
+{% load static %}
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+.main{
+    color: aqua;
+    background-color: rgb(0, 0, 0);
+    height:1500px;
+    margin-top:1px;
+      color:rgb(9, 255, 255);
+  animation-name:glow;
+  animation-duration:200s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:1px 2px 10px #00ffff}
+  to{text-shadow:3px 2px 20px #00ffff}
+}
+   
+  
+
+.sub1{
+    background-color: rgb(65, 63, 63);
+    height: 1160px;
+    width:250px;
+    position:absolute;
+    margin-top: -100px;
+    border-radius: 20px;
+}
+.img1{
+    height:100px;
+    width:100px;
+    background-color: aqua;
+    margin-top:150px;
+    margin-left:70px;
+    border-radius: 60px;
+    
+}
+.img2{
+    margin-top:150px;
+}
+.img3{
+    margin-top:150px;
+}
+.img4{
+    margin-top:150px;
+}
+.img5{
+    margin-top:150px;
+}
+.line{
+    height:650px;
+    width: 2px;
+    background-color: aliceblue;
+    position: absolute;
+    margin-top: 390px;
+    margin-left: 40px;
+}
+.foot2{
+    background-color: rgb(255, 255, 255);
+    height:350px;
+}
+.line{
+  
+  box-shadow: 0 0 20px rgb(0, 177, 118), 0 0 40px rgb(0, 167, 167), 0 0 20px rgb(28, 184, 184);
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #ccffff;
+}
+
+.img1{
+    box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #dfffff;
+}
+
+.frame{
+    background-color: rgb(19, 16, 16);
+    box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+    transition: box-shadow 0.3s ease-in-out;
+    width:800px;
+    height:1100px;
+    margin-left:20%;
+    margin-top: 30px;
+    border-radius:30px;
+}
+
+.f1{
+    height:60px;
+    width:10px;
+    background-color: black;
+    
+    
+}
+
+.sub1{
+    box-shadow: 0 0 7px rgb(100, 232, 255), 0 0 25px #0ff, 0 0 1px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  
+}
+.frame hr{
+    background-color: rgb(219, 255, 255);
+    height: 2px;
+    width:750px;
+}
+
+.img1 img{
+    width:101px;
+    height:auto;
+    border-radius: 100px;
+}
+
+.frame p{
+    margin-left:50px;
+    margin-right: 50px;
+    color: aliceblue;
+}
+.frame{
+    margin-left: 300px;
+}
+
+.cn1{
+   margin-left: 110px;
+   
+}
+.cn1 img{
+   margin-left:20px;
+   width:40px ;
+   height: auto;
+
+
+}
+
+.cn1 img {
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #00ffff;
+}
+
+.cn1 img:hover {
+  box-shadow: 0 0 30px rgb(181, 255, 255), 0 0 60px rgb(63, 255, 255), 0 0 90px #0ff;
+}
+
+.cn1 a{
+  margin-left: 30px;
+  
+}
+
+.foot2{
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    background-color:rgb(1, 30, 41);
+}
+
+
+
+
+
+
+
+
+
+body {
+  background-color:rgb(1, 30, 41); /* Dark green background */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cloud-quote-dark {
+  position: relative;
+  width: 320px;
+  padding: 40px 25px;
+  background: #ffffff;
+  margin: 100px auto;
+  border-radius: 50px;
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
+  color: #222;
+  box-shadow: 0 0 20px #00ffcc; /* Glow effect */
+  z-index: 1;
+}
+
+.cloud-quote-dark::before,
+.cloud-quote-dark::after {
+  content: '';
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Top puffs */
+.cloud-quote-dark::before {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: -40px;
+  box-shadow: 60px 0 #ffffff, 120px 10px #ffffff, 0 0 20px #00ffcc;
+}
+
+/* Bottom puff */
+.cloud-quote-dark::after {
+  width: 120px;
+  height: 80px;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.mainf{
+    background-color: #000000;
+    height: 30px;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+.resume-btn {
+  display: inline-block;
+  background-color: #005e59; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.resume-btn:hover {
+  background-color:#01746e;
+}
+
+.main{height: 1300px;}
+
+
+
+
+
+
+
+
+
+
+</style>
+<div class="main">
+    <br><br>
+    <center>
+        <h1><u>About Me</u><h1>
+    </center>
+  <div class="sub1">
+   <div class="line">
+     
+   </div>
+    <div class="img1">
+      <img src="{% static 'images/pi21.png'%}" width="20%">
+    </div><br>
+    <center>
+    <p>HELLO,<br>I Am Muthu vinayagam</p>
+    
+    <div class="img2">
+        <a href=""> <h4>Education</h4></a>
+    </div>
+    <div class="img2">
+        <a href=""><h4>course</h4></a>
+    </div>
+    <div class="img2">
+       
+        <a href=""><h4>skill</h4></a>
+    </div>
+
+    <div class="img2">
+        
+        <h4>My Profile</h4>
+
+        
+    </div>
+    </center>
+  </div>
+  <div class="foot">
+
+     <div class="frame">
+        <center>
+            <br><br>
+        <h4><u>Education Status</u></h4>
+        </center>
+        <br><br><br><br><br>
+         <p>
+         </p>
+         <hr>
+         <p>
+            I have completed my Bachelor of Science (B.Sc) in Zoology from Sri Kumara Gurupara Swamigal Arts College, Srivaikundam, in the year 2025.<br><br>
+
+            Throughout my graduation, I gained in-depth knowledge of various branches of zoology including animal physiology, ecology, genetics, and environmental biology. The course not only deepened my interest in the life sciences but also helped me develop essential skills such as critical thinking, research analysis, and laboratory techniques.
+        </p>
+         <hr>
+         <p>
+            Post Graduate Diploma in Computer Applications (PGDCA)
+             Completed at TCEDS Education Center, Srivaikundam.
+            This course helped me develop a strong foundation in computer fundamentals, MS Office, database management, programming languages, and basic software tools. It also improved my confidence in using digital platforms for both academic and professional purposes.<br><br>
+            Python Full Stack Development
+            Completed in January 2025 at Edex Tech IT Solution, Madurai.
+            This course provided me with hands-on experience in both front-end and back-end development using technologies such as HTML, CSS, JavaScript, Python, Django, MySQL, and more. It strengthened my ability to build responsive web applications and manage databases efficiently.
+         </p>
+         <hr>
+          <p>
+             1, Front-end: HTML, CSS, JavaScript, Bootstrap
+
+             2, Back-end: Python, Django, Flask
+
+             3, Database: MySQL, SQLite
+
+             4, Web application development and project building
+
+             5, Version control using Git<br><br>
+
+             6, MS Office: Word, Excel, PowerPoint
+
+             7, HTML: Basics of web page structure and design
+
+             8, Tally: Accounting software skills for managing business finances,
+
+             9, Photoshop: Image editing and graphic design basics,
+
+             10, CorelDRAW: Vector-based graphic design,
+
+             11, PageMaker: Desktop publishing and layout design for brochures, books, 
+         </p>
+         <hr>
+         <div class="cn1"><br><br>
+            <a href="https://wa.me/919361104788" target="_blank"><img src="{% static 'images/logo7.png' %}" alt="My Icon" width="2.5%">    Whatsapp</a>
+            <a href="https://www.instagram.com/kulasai_mutharamman_001?igsh=b2R2aW4wbG5lYXVy" target="_blank"><img src="{% static 'images/logo9.png' %}" alt="My Icon" width="2.5%">   Instagram</a>
+            <a href="https://www.linkedin.com/in/muthu-vinayagam-5b34902b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="{% static 'images/logo8.png' %}" alt="My Icon" width="2.5%">   Linkedin</a>
+            <a href="mailto:muthuvinayagam219@gmail.com" target="_blank"><img src="{% static 'images/logo3.png' %}" alt="My Icon" width="2.5%">   Mail</a>
+         </div><br><br>
+         <hr>
+         
+     </div>
+
+  </div>
+
+ <a href="{% static 'images/resume.pdf' %}" download class="resume-btn">📄 Download My Resume</a>
+
+</div>
+
+
+
+<div class="foot2"><br>
+    <center>
+        <h4><u>Discription</u></h4>
+       
+             <center>
+               <p>
+                   I'm a dedicated Python Full Stack Developer from Padmanabhamangalam, Srivaikundam. I have a strong interest in building modern, responsive, and user-friendly websites and web applications.
+                   I completed my Full Stack Development course at Edex Tech IT Solution, Madurai in January 2025, where I learned technologies like HTML, CSS, JavaScript, Python, Django, and more.
+                   In addition, I have also completed a PGDCA (Post Graduate Diploma in Computer Applications) in Srivaikundam, which enhanced my knowledge in software tools like MS Office, Tally, Photoshop, CorelDraw, and PageMaker. 
+               </p>
+              </center>
+            
+    <div class="cloud-quote-dark">
+       <p>"Every line of code is a step closer to your dream."</p>
+    </div>
+
+
+
+
+    </center>
+</div>
+<div class="mainf">
+  <marquee>Thank you for visiting my portfolio! | From Srivaikundam, Padmanabhamangalam | Python Full Stack Developer | Keep Exploring 🌐
+ </marquee>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+{% endblock %}

@@ -1,0 +1,396 @@
+{%extends 'basic.html'%}
+{%block nav%} 
+{% load static %}
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+.main{
+    background-color: black;
+    color: azure;
+    height:450px;
+    position:relative;
+}
+
+.main1{
+    background-color: rgb(59, 53, 53);
+    color: azure;
+    height:480px;
+    box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #dfffff;
+    
+}
+
+.main2{
+    background-color: rgba(0, 0, 0, 0.904);
+    color: azure;
+    height:450px;
+}
+
+.main3{
+    background-color: rgba(0, 0, 0, 0.774);
+    color: azure;
+    height:450px;
+}
+
+.main4{
+    background-color: rgba(0, 0, 0, 0.849);
+    color: azure;
+    height:450px;
+
+}
+
+.bgvid marquee {
+  position: absolute;
+  top:250px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  font-size:40px;
+  font-family: 'Roboto', sans-serif;
+
+ 
+  color:rgb(0, 135, 168); /* optional fade effect */
+  white-space: nowrap;
+  pointer-events: none; /* ensures marquee can't be interacted with */
+  
+   text-shadow: 0 0 20px rgb(50, 127, 190), 0 0 40px rgb(58, 174, 219), 0 0 20px rgb(78, 203, 241);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Video appears on top */
+.bgvid video {
+  position: relative;
+  z-index: 1;
+
+}
+
+.main1 h1{
+    color: rgb(0, 135, 168);
+}
+
+.main5{
+     background-color: rgb(82, 74, 74);
+    color: azure;
+    height:450px;
+    
+}
+
+.main2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Text section (left side) */
+.main2.sub1 {
+  flex: 1;
+}
+
+.main2.sub1 h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  padding-bottom: 5px;
+}
+
+.main2.sub1 p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-top:60px;
+  margin-left: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Image section (right side) */
+.main2 .sub2 img {
+  width: 300px; /* override inline width if needed */
+  height: auto;
+  margin-top:60px;
+  margin-left:90px;
+  margin-right: 80px;
+  box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius:5px;
+
+}
+
+.main2 .sub2 img:hover {
+  box-shadow: 0 0 30px rgb(181, 255, 255), 0 0 60px rgb(63, 255, 255), 0 0 90px #0ff;
+  width: 310px; 
+  height: auto;
+}
+
+
+ /* main4 of flex  */
+
+ .main4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Text section (left side) */
+.main4.sub1 {
+  flex: 1;
+}
+
+.main4.sub1 h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  padding-bottom: 5px;
+}
+
+.main4.sub1 p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-top:60px;
+  margin-left: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main4 .sub2 img {
+  width: 300px; /* override inline width if needed */
+  height: auto;
+  margin-top:60px;
+  margin-left:90px;
+  margin-right: 80px;
+  box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius:5px;
+
+}
+
+.main4 .sub2 img:hover {
+  box-shadow: 0 0 30px rgb(181, 255, 255), 0 0 60px rgb(63, 255, 255), 0 0 90px #0ff;
+  width: 310px; 
+  height: auto;
+}
+
+/* main3 of flex*/
+.main3 {
+  display: flex;
+  flex-direction: row-reverse; /* This moves the image to the left */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Text section (now right side) */
+.main3 .sub1 {
+  flex: 1;
+}
+
+.main3 .sub1 h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  padding-bottom: 5px;
+  margin-left: 450px;
+}
+
+.main3 .sub1 p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-top: 60px;
+  margin-left: 80px;  /* removed margin-left */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Image section (now left side) */
+.main3 .sub2 img {
+  width: 300px;
+  height: auto;
+  margin-top: 60px;
+  margin-left: 70px;  /* removed margin-left */
+  margin-right: 40px;
+  box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.main3 .sub2 img:hover {
+  box-shadow: 0 0 30px rgb(181, 255, 255), 0 0 60px rgb(63, 255, 255), 0 0 90px #0ff;
+  width: 310px;
+  height: auto;
+}
+
+
+/* 🔧 Ensure .main1 is the positioning context */
+.main1{
+  position:relative;              /* makes absolute‑pos children use this box */
+}
+
+/* 🌌  Tiny animated cards */
+.corner-card{
+  position:absolute;
+  width:285px;                     /* very small */
+  height:130px;
+  background:#364246;             /* dark blue */
+  color:#fff;
+  font-size:12px;
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:100;                    /* sits on top of everything in .main1 */
+  animation:swipeUp 1.6s ease-in-out infinite alternate;
+}
+
+/* 📍 Corners */
+.corner-card.top-left{
+  top:55px;
+  left:90px;
+}
+.corner-card.bottom-right{
+  bottom:55px;
+  right:90px;
+}
+
+/* 🎞️  Swipe‑up + subtle color shift */
+@keyframes swipeUp{
+  from{
+    transform:translateY(0);
+    background:#293b41;
+  }
+  to{
+    transform:translateY(-10px);
+    background:#1b2a2e;           /* slightly lighter blue */
+  }
+}
+
+.main5{background-color: #0c6d88;
+      height: 350px;
+}
+
+.foot{
+  background-color: #000000;
+}
+    
+</style>
+
+<div class="main">
+  <div class="main1">
+   <center>
+    <h1><u> My Project</u></h1>
+   </center>
+        
+    <div class="bgvid">
+        <marquee>library management system,        library management system,           library management system,         library management system, </marquee>
+       <video id="hoverVideo" width="100%" height="400" muted loop>
+         <source src="{% static 'videos/pv.mp4' %}" type="video/mp4">
+          
+       </video>
+    </div>
+    <div class="corner-card top-left"><center><p>"Smart system to manage and organize library operations."<br>Improves efficiency and reduces manual work.</center></p></div>
+    <div class="corner-card bottom-right"><center><p>"Tracks books, issues, returns, and student records."<br>Ideal for schools and colleges</center></p></div>
+   </div> 
+
+
+  <div class="main2">
+    <div class="sub1">
+     <h2><u>Add Book Page</u></h2><br><br>
+      <p>
+        The "Add Book" page serves as the foundation of the Library Management System, allowing administrators to input and register new books into the system database. With a clean and intuitive form layout, users can enter essential details such as the book title, author name, publisher, ISBN number, and availability status.<br><br>This streamlined interface ensures quick data entry while maintaining consistency and accuracy in book records. Once submitted, the book is instantly visible in the dashboard, making it ready for issuing or management actions. The page is designed with usability in mind, supporting efficient catalog expansion for growing libraries.
+      </p>
+      
+    </div>
+    <div class="sub2"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="90" data-aos-duration="2000">
+     <img src="{% static 'images/page1.png'%}" width="20%">
+    </div>
+  </div>
+  
+  <div class="main3">
+    
+    <div class="sub1">
+     <h1><u>Add Member Page</u></h1>
+      <p>This page allows the admin or authorized user to add new members to the system. 
+        The form typically includes fields such as member name, ID, contact information, email, membership type, and joining date. 
+        Once submitted, the member's information is securely stored in the database and can be accessed or managed later.<br><br>The "Add Member" section is designed to register new users to the library. Admins can fill out the member's full name, contact details, email, and membership ID. This data helps manage book borrowings, returns, and member records efficiently.
+        </p>
+      
+    </div>
+    <div class="sub2" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="90" data-aos-duration="2000">
+     <img src="{% static 'images/page2.png'%}" width="20%">
+    </div>
+    
+  </div>
+
+
+  <div class="main4">
+    <div class="sub1">
+     <h2><u>Update Book Page</u></h2><br><br>
+      <p>
+        This page enables the librarian or admin to update existing book details in the database.
+         By entering the book’s ID or title, they can modify fields such as author name, publisher, ISBN number, and availability status. 
+        This helps ensure that the book records remain accurate and up to date.<br><br>
+        Keeping book information updated is crucial for inventory accuracy and user satisfaction. 
+        Whether it’s correcting a typo, changing the availability status, or updating the edition and publisher details, this page provides a simple interface to make changes. 
+        Timely updates also help members know which books are available, reserved, or out of stock, improving the overall library experience.
+
+        </p>
+      
+    </div>
+    <div class="sub2" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="90" data-aos-duration="2000">
+     <img src="{% static 'images/page3.png'%}" width="20%">
+    </div>
+  </div>
+  
+  
+
+  <div class="main5">
+    <br>
+    <center>
+     <p><h2><b><u>Project Description</u></b></h2>
+      <br>
+The Library Management System (LMS) is a digital solution designed to automate and simplify the management of a library's core functions. It helps librarians and users manage books, track issued and returned items, and maintain student or member records with ease.<br>
+
+The system provides a centralized platform where book availability can be checked, due dates are monitored, and fines can be calculated automatically. It reduces the need for manual paperwork and improves the overall efficiency of library operations.<br>
+
+Developed with user-friendly interfaces, the LMS ensures that both administrators and students can interact with the system easily. It is ideal for educational institutions such as schools, colleges, or training centers seeking a smart and modern approach to library management.</p>
+    </center>
+  </div>
+
+  <div class="foot">
+    <center><br>
+    <h3><u>Discription</u></h3><br>
+    <p>     
+        The Library Management System is a web-based application designed to simplify and automate the core operations of a library. From managing book records to tracking borrowing activities and member details, this system offers a clean and user-friendly interface to ensure efficient library management.<br>
+        It is ideal for small to medium-sized libraries, school libraries, or personal book collections
+    </p>
+    </center><br><br>
+  </div>
+</div>
+
+
+
+<script>
+  const video = document.getElementById("hoverVideo");
+
+  video.addEventListener("mouseenter", function () {
+    video.play();
+  });
+
+  video.addEventListener("mouseleave", function () {
+    video.pause();
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+{% endblock %}

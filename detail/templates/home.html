@@ -1,0 +1,730 @@
+{%extends 'basic.html'%}
+{%block nav%} 
+{% load static %}
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+
+
+.main{
+   background-color: rgb(0, 0, 0);
+   height:1800px;
+
+}
+.sub1{
+   height:450px;
+   background-color: rgb(0, 0, 0);
+   color: rgb(19, 250, 250);
+   
+}
+    
+.sub1 h1{
+   padding-top:160px;
+   padding-left:110px;
+   font-size: 30px;
+}
+.sub1 h2{
+   padding-top:5px;
+   padding-left:110px;
+   font-size:35px;
+}
+.sub1 h4{
+   padding-top:5px;
+   padding-left:110px;
+   font-size:20px;
+}
+.sub2{
+   background-color: rgb(39, 36, 36);
+   height:300px;
+   color: aliceblue;
+   display: grid;
+   grid-template-columns:1fr 1fr 1fr;
+   font-size:14px;
+   padding:70px;
+   padding-top:70px;
+   text-align: center;
+   
+}
+.img{
+   background-color: rgb(15, 255, 255);
+   height:50px;
+   width: 50px;
+   border-radius: 60px;
+}
+
+.us{
+   background-color:rgb(49, 46, 46);
+   height:400px;
+   color: aqua;
+   font-family:'Times New Roman', Times, serif;
+     color:rgb(9, 255, 255);
+  animation-name:glow;
+  animation-duration:200s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:1px 2px 10px #00ffff}
+  to{text-shadow:3px 2px 20px #00ffff}
+}
+
+.aimg{
+   background-color: rgb(1, 255, 255);
+   border-radius: 60px;
+   height:70px;
+   width: 70px;
+}
+.m{
+   width:60%;
+   font-size:20px;
+     color:rgb(9, 255, 255);
+  animation-name:glow;
+  animation-duration:200s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:1px 2px 10px #00ffff}
+  to{text-shadow:3px 2px 20px #00ffff}
+}
+
+.us h1{
+   font-size: 30px;
+}
+.p{
+   height:500px;
+   color: rgb(0, 255, 255);
+   background-color: rgb(0, 0, 0);
+     color:rgb(9, 255, 255);
+  animation-name:glow;
+  animation-duration:200s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:1px 2px 10px #00ffff}
+  to{text-shadow:3px 2px 20px #00ffff}
+}
+
+button{
+   background-color: rgb(53, 243, 243);
+   border-radius:18px;
+}
+.contmain{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   padding:60px;
+  
+}
+.cont{
+   background-color: rgb(1, 255, 255);
+   border-radius: 9px;
+   height:380px;
+   width: 280px;
+
+}
+
+.for{
+   background-color: rgb(0, 0, 0);
+   color: aqua;
+   height:600px;
+   margin-top: 1px;
+   
+}
+.for label{
+   padding-left: 550px;
+}
+.for input{
+   margin-left: 550px;
+   width:300px;
+   border-color: aqua;
+   background-color:rgb(255, 254, 254);
+   
+}
+.bt1{
+margin-left: 650px;
+}
+
+.footer{
+   background-color: rgb(36, 36, 36);
+   height:300px;
+   color: rgb(255, 255, 255);
+
+}
+.lfooter{
+   background-color: black;
+   height:70px;
+}
+
+
+
+
+.sub1 h1{
+  
+  color:rgb(9, 255, 255);
+  animation-name:glow;
+  animation-duration:200s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:3px 5px 8px #00ffff}
+  to{text-shadow:3px 2px 10px #00ffff}
+}
+.sub1 h2{
+  
+  color:rgb(9, 255, 255);
+  animation-name:glow;
+  animation-duration:200s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:1px 2px 9px #00ffff}
+  to{text-shadow:1px 2px 10px #00ffff}
+}
+
+.logos{
+   margin-left: 110px;
+}
+.logos img{
+   margin-left:20px;
+
+}
+
+.logos img {
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #00ffff;
+}
+
+.logos img:hover {
+  box-shadow: 0 0 30px rgb(181, 255, 255), 0 0 60px rgb(63, 255, 255), 0 0 90px #0ff;
+}
+
+
+/* Swipe-up animation */
+.sub1 h2{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textSwipeUp 1s ease-out forwards;
+}
+
+/* Optional delay */
+.sub1 h2 {
+  animation-delay: 0.3s;
+}
+
+/* Keyframes for swipe-up */
+@keyframes textSwipeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Swipe Down */
+.sub1 h1{
+  transform: translateY(-30px);
+  animation: textswipeDown 1s ease-out forwards;
+}
+
+/* Optional delays */
+.sub1 {
+  animation-delay: 0.3s;
+}
+@keyframes textswipeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logos{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: SwipeUp 1s ease-out forwards;
+}
+
+/* Optional delay */
+.logos {
+  animation-delay: 0.9s;
+}
+
+/* Keyframes for swipe-up */
+@keyframes SwipeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile{
+
+   width: 170px;
+   height: 170px;
+   background-color: #00ffff;
+   position:absolute;
+   margin-top: 150px;
+   margin-left: 70%;
+   border-radius: 89px;
+
+}
+
+.profile {
+  
+  box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #00ffff;
+}
+
+.profile:hover {
+  box-shadow: 0 0 30px rgb(181, 255, 255), 0 0 60px rgb(63, 255, 255), 0 0 90px #0ff;
+}
+.pm{
+   border-radius: 110px;
+   width: 170px;
+}
+
+.sub1 h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #4af9ff;
+  width: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(9, 255, 255);
+  
+  animation: typingGlow 3s steps(34, end) forwards, blink 0.75s step-end infinite;
+}
+
+/* Combined typing + glow */
+@keyframes typingGlow {
+  from {
+    width: 0;
+    text-shadow: 1px 6px 40px #00ffff;
+  }
+  to {
+    width: 34ch;
+    text-shadow: 4px 6px 10px #00ffff;
+  }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.img{
+  
+  box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #00ffff;
+}
+
+.aimg{
+  
+  box-shadow: 0 0 20px rgb(0, 217, 255), 0 0 40px rgb(0, 225, 255), 0 0 20px rgb(0, 225, 255);
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #00ffff;
+}
+
+.us button{
+  
+  box-shadow: 0 0 20px rgb(100, 232, 255), 0 0 40px #0ff, 0 0 20px #0ff;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #00ffff;
+}
+
+.us button:hover {
+  box-shadow: 0 0 30px rgb(181, 255, 255), 0 0 60px rgb(63, 255, 255), 0 0 90px #0ff;
+}
+  
+
+   
+
+
+
+
+.us {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Optional: dark overlay for readability */
+.us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1.5;
+}
+
+/* Foreground content (above video) */
+.us center,
+.us h1,
+.us .m,
+.us .aimg,
+.us a {
+  position: relative;
+  z-index: 2;
+  
+}
+
+
+   
+
+
+/* Image inside .aimg */
+.us .aimg img {
+  width: 70px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 160px;
+}
+
+/* Marquee text */
+.us .m marquee {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+ 
+}
+
+/* Button style */
+.us a button {
+
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.us a button:hover {
+  transform: scale(1.05);
+}
+
+.us video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  /* REMOVE THIS ↓ */
+  /* pointer-events: none; */
+}
+
+
+
+/*my project*/
+
+
+.cont {
+  width: 70%;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 0 15px #00ffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.top-img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  padding: 2px 30px;
+  border-radius:20px;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #00e1ff;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00ffff;
+  color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  width:170px;
+  
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+.lfooter{
+    color: aliceblue;
+    height: 25px;
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+<div class="main">
+    
+
+
+
+   <div class="profile">
+        <img src="{% static 'images/my.jpg' %}" alt="My Icon" width="90%" class="pm">
+   </div>
+   
+   <div class="sub1">
+    
+      <h1>Welcome to my site</h1>
+      <h4>Hey, I Am Muthu vinayagam !</h4>
+      <h2>A Fullstack Developer</h2><br>
+      
+      
+     <div class="logos"> 
+      <a href="https://wa.me/919361104788" target="_blank"><img src="{% static 'images/logo7.png' %}" alt="My Icon" width="2.5%"></a>
+      <a href="https://www.instagram.com/kulasai_mutharamman_001?igsh=b2R2aW4wbG5lYXVy" target="_blank"><img src="{% static 'images/logo9.png' %}" alt="My Icon" width="2.5%"></a>
+      <a href="https://www.linkedin.com/in/muthu-vinayagam-5b34902b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="{% static 'images/logo8.png' %}" alt="My Icon" width="2.5%"></a>
+      <a href="mailto:muthuvinayagam219@gmail.com" target="_blank"><img src="{% static 'images/logo3.png' %}" alt="My Icon" width="2.5%"></a>
+     </div>
+   
+    
+
+   
+   </div>
+   
+   <div class="sub2">
+
+      <div class="para">
+         <center>
+         <div class="img" >
+            <img src="{% static 'images/miclo.png' %}" alt="My Icon" width="96%">
+         </div>
+         </center><br><br>
+         
+         <p>
+            Proficient in Microsoft Office applications such as Word, Excel, and PowerPoint. 
+            Able to create structured documents, data reports, and professional presentations with ease.
+         </p>
+      </div>
+      <div class="para">
+         <center>
+         <div class="img">
+            <img src="{% static 'images/canlo.png' %}" alt="my icon" width="96%">
+         </div>
+         </center><br><br>
+         <p>Skilled in using Canva to design posters, social media graphics, resumes, and presentations. 
+            Creative approach to layout, color, and typography for visually engaging designs.
+         </p>
+      </div>
+      <div class="para">
+         <center>
+         <div class="img">
+            <img src="{% static 'images/corlo.png' %}" alt="my icon" width="96%">
+         </div>
+         </center><br><br>
+         <p>
+            Experience with CorelDRAW for designing logos, brochures, and vector-based artwork.
+            Comfortable using layers, shapes, and tools for print-ready designs
+         </p>
+
+         
+         
+      </div>
+   </div>
+   <div class="us">
+       <video id="hoverVideo" width="100%" height="400" muted loop>
+         <source src="{% static 'videos/bgvideo.mp4' %}">
+          
+       </video>
+    
+      <center>
+         <br>
+         <h1><u>ABOUT US !</u></h1>
+         <br>
+          <div class="aimg">
+            <img src="{% static 'images/pi21.png' %}" alt="my icon" width="96%">
+         </div>
+         <br><br>
+         <div class="m">
+            <marquee>Hey, Hi, I Am V.Muthu vinayagam a Fullstack
+               Python Developer, I completed My UG graduation in the feild
+                of zoology, in sri kumaragurupara swamigala art's college 
+                located at Thoothukudi distric </marquee>
+         </div><br><br>
+      <a href="/super/about/"><button data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="90" data-aos-duration="2000">Learn More</button></a>
+      </center>
+   </div>
+   <div class="p">
+      <br>
+      <center>
+         <h2><u>My Project</u></h2>
+      </center>
+
+      <div class="contmain">
+         <div class="cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="90" data-aos-duration="2000">
+    
+             <img src="{% static 'images/page1.png' %}" alt="Top Image" class="top-img">
+
+             <div class="content">
+              
+               <p> A simple Library Management System to manage books, users, and borrowing records.</p>
+               <a href="/super/project/" class="btn">See My Projects</a>
+             </div>
+         </div>
+
+
+
+         <div class="cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="90" data-aos-duration="2000">
+    
+              <img src="{% static 'images/page2.png' %}" alt="Top Image" class="top-img">
+
+             <div class="content">
+               
+               <p> A basic library system designed to keep records of members.</p>
+               <a href="/super/project/" class="btn">See My Projects</a>
+             </div>
+         </div>
+
+
+
+         <div class="cont" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="90" data-aos-duration="2000">
+    
+              <img src="{% static 'images/page3.png' %}" alt="Top Image" class="top-img">
+
+             <div class="content">
+               
+               <p> Allows users to issue books and updates the library records in real-time.</p>
+               <a href="/super/project/" class="btn">See My Projects</a>
+             </div>
+         </div>
+      </div>
+   </div>
+   </div>
+   
+   
+   <div class="footer">
+      <br><br>
+      <center>
+     <h3><u>Discription</u></h3><br>
+     <p>
+      Welcome to My Portfolio!
+      I’m Muthu Vinayagam V, a passionate learner and creative individual skilled in design and development tools like HTML, CSS, JavaScript, Canva, CorelDraw, and Microsoft Office. This website is a reflection of my journey, showcasing the skills I’ve gained, the projects I’ve built, and the creativity I bring to everything I do.
+
+      Explore the site to learn more about my education, technical expertise, design work, and the services I offer. Whether you're here for collaboration, inspiration, or opportunities, I hope my work speaks for itself.
+
+      Let’s build something amazing together!
+      </p>
+      </center>
+
+   </div>
+   <div class="lfooter">
+      
+      <p>© 2025-2025 Muthu.com,</p>
+   </div>
+
+
+</div>
+
+
+
+
+
+<script>
+  // Wait until the page is fully loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    const usDiv = document.querySelector(".us");
+    const video = document.getElementById("hoverVideo");
+
+    if (!usDiv || !video) return;
+
+    // Ensure video is muted so play() works without user gesture
+    video.muted = true;
+
+    usDiv.addEventListener("mouseenter", () => {
+      video.play().catch(() => {});
+    });
+
+    usDiv.addEventListener("mouseleave", () => {
+      video.pause();
+    });
+  });
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+  
+
+{% endblock %}
