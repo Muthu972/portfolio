@@ -6,6 +6,11 @@ from django.views import View
 from django.contrib import messages
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello from portfolio!")
+
 
 
 
