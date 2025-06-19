@@ -8,15 +8,14 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.http import HttpResponse
 
-def home(request):
-    return HttpResponse("Hello from portfolio!")
+
 
 
 
 
 def home(request):
     data={"detail":details.objects.all()}
-    return render(request,'home.html',data)
+    return HttpResponse(request,'home.html',data)
 
     
 def abouts(request):

@@ -11,12 +11,7 @@ urlpatterns = [
     path('about/',abouts),
     path('project/',projects),
     path('addmembers/',addmember),
-    # detail/urls.py
-
-
-urlpatterns = [
-    path('', views.home, name='home'),  # ← route for homepage
-]
+    
 
 
 ]
